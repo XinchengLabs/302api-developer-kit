@@ -1,0 +1,19 @@
+# Merge these entries into the existing patch layer; do not replace the whole profile.
+# Replace MODEL_ID_HERE with a model currently available to your Key.
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      api302:
+        displayName: 302API
+        apiKeyEnv: ZH_API_KEY
+        api: openai-completions
+        baseURL: https://api.302api.com
+        models:
+          - id: MODEL_ID_HERE
+            name: MODEL_ID_HERE
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: api302
+    model: MODEL_ID_HERE

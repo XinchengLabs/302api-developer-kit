@@ -1,0 +1,15 @@
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#25334b;background:#f3f6fb;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background-image:linear-gradient(#dfe6f044 1px,transparent 1px),linear-gradient(90deg,#dfe6f044 1px,transparent 1px);background-size:64px 64px}
+main{max-width:820px;margin:0 auto;padding:40px 24px 48px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:64px;color:#65738a}
+header a{font-size:23px;font-weight:650;text-decoration:none}
+a{color:#356cda;text-underline-offset:3px}
+h1{font-size:clamp(28px,5vw,44px);font-weight:550;letter-spacing:-.03em;margin:0 0 16px}
+.intro{margin-bottom:40px}
+p{color:#526075;line-height:1.8;font-size:15px}
+section{padding:28px;margin-top:20px;border:1px solid #dce4ee;border-radius:18px;background:#ffffffeb;box-shadow:0 10px 36px #24416b06}
+h2{font-size:19px;font-weight:600;margin:0 0 12px}
+pre{overflow:auto;padding:18px;background:#f1f5fb;border-radius:10px;line-height:1.7;font-size:14px}
+footer{margin-top:36px;color:#65738a;font-size:14px;line-height:2}
+@media(max-width:480px){main{padding:24px 16px}header{margin-bottom:40px}section{padding:20px}}

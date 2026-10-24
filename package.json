@@ -1,0 +1,10 @@
+{
+  "name": "302api-developer-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "302API integration examples, client configuration and browser components",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "dependencies": { "openai": "^6.0.0" }
+}

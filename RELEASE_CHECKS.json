@@ -1,0 +1,22 @@
+{
+  "release_date": "2026-10-25",
+  "scope": [
+    "public documentation",
+    "integration examples",
+    "client configuration",
+    "independent browser components"
+  ],
+  "credential_scanner": "Gitleaks 8.30.1",
+  "unresolved_credential_findings": 0,
+  "private_identifier_findings": 0,
+  "python_syntax_files": 3,
+  "javascript_syntax_files": 7,
+  "bash_syntax_files": 2,
+  "json_parse": "passed",
+  "dsh_yaml_structure": "passed",
+  "relative_document_links": "passed",
+  "runtime_sdk_requests_run": false,
+  "browser_or_client_acceptance_run": false,
+  "paid_requests_made": false,
+  "production_changed": false
+}
