@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "302API integration examples, client configuration and browser components",
-  "license": "PolyForm-Noncommercial-1.0.0",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "node": ">=20"
   },

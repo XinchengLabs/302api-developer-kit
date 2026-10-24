@@ -19,7 +19,8 @@
   "browser_or_client_acceptance_run": false,
   "paid_requests_made": false,
   "production_changed": false,
-  "license": "PolyForm-Noncommercial-1.0.0",
-  "commercial_use": "separate written authorization required; see LICENSE and LICENSING.md",
-  "prior_mit_release": "67df8285831cacf4ad9ed52e1ffb247345ad7b89"
+  "license": "LicenseRef-302API-Community-Commercial-1.0",
+  "commercial_use": "free integration in own projects to access 302API; written authorization required for competitive API relay/gateway services or prohibited rebranding redistribution",
+  "prior_mit_release": "67df8285831cacf4ad9ed52e1ffb247345ad7b89",
+  "prior_polyform_release": "fc33b9c94c4f32ba7ca0bfdb70182186cbd94b90"
 }

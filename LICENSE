@@ -1,73 +1,82 @@
-# PolyForm Noncommercial License 1.0.0
+# 302API Community & Commercial License
 
-<https://polyformproject.org/licenses/noncommercial/1.0.0>
+版本：1.0
+许可方：本项目著作权人，见 NOTICE。
 
-## Acceptance
+本许可是自定义的源码可见许可。部分授权与免责结构参考 Apache-2.0，但本许可不是标准 Apache License 2.0，不包含可独立选择、绕过下述限制的 Apache-2.0 授权，也不属于 OSI 定义的开源许可。
 
-In order to get any license under these terms, you must agree to them as both strict obligations and conditions to all your licenses.
+## 1. 适用范围与定义
 
-## Copyright License
+1.1 “本项目”指许可方有权按本许可提供的本仓库代码、文档、示例、配置和独立前端组件。第三方依赖、素材和贡献如有另行许可，以相应权利和声明为准。本许可不覆盖未公开的生产代码、API 服务本身或任何用户数据。
 
-The licensor grants you a copyright license for the software to do everything you might do with the software that would otherwise infringe the licensor's copyright in it for any permitted purpose.  However, you may only distribute the software according to [Distribution License](#distribution-license) and make changes or new works based on the software according to [Changes and New Works License](#changes-and-new-works-license).
+1.2 “自有项目”包括个人或企业自行运营或为其自身业务使用的应用、网站、SaaS 产品、企业内部系统、智能助手及其业务后台。自有项目可以收费，也可以面向客户提供具体业务功能。
 
-## Distribution License
+1.3 “竞争性 API 中转/网关服务”指使用本项目受许可内容，搭建、运营或交付面向第三方提供的产品或服务，以通用模型 API 转发、聚合、转售或白标网关为主要用途，且实质替代 302API 同类服务。是否构成该服务按实质用途判断，不仅凭是否收费、是否提供 API 或是否采用代理架构判断。
 
-The licensor grants you an additional copyright license to distribute copies of the software.  Your license to distribute covers distributing the software with changes and new works permitted by [Changes and New Works License](#changes-and-new-works-license).
+1.4 “再分发”指向第三方提供本项目或其可识别衍生版本的源码、构建产物、安装包、镜像或其他副本。正常自有应用调用其自身业务后台，不因此自动构成竞争性 API 中转服务。
 
-## Notices
+## 2. 免费许可的用途
 
-You must ensure that anyone who gets a copy of any part of the software from you also gets a copy of these terms or the URL for them above, as well as copies of any plain-text lines beginning with `Required Notice:` that the licensor provided with the software.  For example:
+在遵守本许可的条件下，许可方授予你全球性、非独占、免许可费的著作权许可，允许你：
 
-> Required Notice: Copyright Yoyodyne, Inc. (http://example.com)
+(a) 为学习、评估、研究和实验复制、运行、修改本项目；
+(b) 在自有商业或非商业项目中免费使用、修改和集成本项目，以接入 302API 服务；
+(c) 为上述获准用途制作衍生作品，并在遵守第 3、4 条的情况下分发相关副本。
 
-## Changes and New Works License
+免费商用集成不要求你公开自有项目的源代码，也不要求整个应用只能使用 302API。应用中同时存在其他提供商接入，不单独构成违规；但不因此获得第 3 条所限制用途的许可。
 
-The licensor grants you an additional copyright license to make changes and new works based on the software for any permitted purpose.
+本条“免费”仅指本项目代码和文档的许可费，不免除 API 调用、订阅或其他服务费用。302API 服务的使用另受其服务条款和有效业务约定约束。
 
-## Patent License
+## 3. 必须取得书面授权的用途
 
-The licensor grants you a patent license for the software that covers patent claims the licensor can license, or becomes able to license, that you would infringe by using the software.
+未经许可方事先书面授权，你不得：
 
-## Noncommercial Purposes
+(a) 将本项目用于第 1.3 条定义的竞争性 API 中转/网关服务，包括为其他经营者制作、交付或运营该类服务；
+(b) 除第 4.3 条允许的正常组件集成情形外，独立再分发本项目或其可识别衍生项目时，删除、遮盖或替换本项目原有的 302API 项目名称、来源标识及相关署名，将其作为其他品牌重新分发；
+(c) 超出第 2 条免费许可用途使用本项目，或向他人承诺其可以不受本许可限制地使用本项目。
 
-Any noncommercial purpose is a permitted purpose.
+本条仅约束使用本项目受许可内容的行为，不限制依法独立开发、未使用本项目受许可内容的产品，也不排除适用法律赋予的权利。
 
-## Personal Uses
+普通商业应用、面向客户的 SaaS 或业务功能 API，只要属于第 2 条获准用途且不构成第 1.3 条定义的竞争性服务，不会仅因向第三方提供具体业务功能或收取费用而被认定为竞品。仅供组织自身业务使用、用于保护密钥或统一调用的内部代理，不会仅因具有通用转发或多提供商路由能力而被视为竞争性服务。
 
-Personal use for research, experiment, and testing for the benefit of public knowledge, personal study, private entertainment, hobby projects, amateur pursuits, or religious observance, without any anticipated commercial application, is use for a permitted purpose.
+## 4. 分发、修改与品牌来源
 
-## Noncommercial Organizations
+4.1 分发本项目或相关衍生部分时，应随附本许可和 NOTICE，保留相关版权、许可及来源声明，并明确标注对原项目所作的重要修改。
 
-Use by any charitable organization, educational institution, public research organization, public safety or health organization, environmental protection organization, or government institution is use for a permitted purpose regardless of the source of funding or obligations resulting from the funding.
+4.2 独立再分发本项目或其可识别衍生项目时，应保留原有 302API 来源标识，不得通过去品牌换皮使接收者误认为其与原项目无关或完全由你独立创作。
 
-## Fair Use
+4.3 将组件集成到自有产品时，可使用自己的产品名称和标识，无需将整个产品改为 302API 品牌；仍应保留所集成内容相关的版权、许可证和 NOTICE。没有可见品牌界面的组件不要求额外插入全局 Logo。
 
-You may have "fair use" rights for the software under the law. These terms do not limit them.
+4.4 保留来源标识不等于取得一般商标许可。除准确说明来源、兼容性和遵守本许可所需外，不得使用 302API 或第三方名称、标识暗示官方背书、合作或授权。
 
-## No Other Rights
+4.5 对你的独立代码可以适用其他条款，但这些条款不得取消本项目受许可部分的限制，也不得把你没有取得的商业权利转授给他人。
 
-These terms do not allow you to sublicense or transfer any of your licenses to anyone else, or prevent the licensor from granting licenses to anyone else.  These terms do not imply any other licenses.
+## 5. 权利与单独商业授权
 
-## Patent Defense
+本项目的著作权及未明确授予的权利由相应权利人保留。本许可不推定授予未明确列出的专利、商标、上游服务或第三方权利。
 
-If you make any written claim that the software infringes or contributes to infringement of any patent, your patent license for the software granted under these terms ends immediately. If your company makes such a claim, your patent license ends immediately for work on behalf of your company.
+许可方可以就第 3 条用途或其他需求另行提供书面商业授权。其适用范围、期限、费用、分发方式和例外以正式书面约定为准。提交申请、支付普通 API 账单、添加署名或保留 Logo 均不自动等于取得该授权。
 
-## Violations
+## 6. 既有版本与第三方权利
 
-The first time you are notified in writing that you have violated any of these terms, or done anything with the software not covered by your licenses, your licenses can nonetheless continue if you come into full compliance with these terms, and take practical steps to correct past violations, within 32 days of receiving notice.  Otherwise, all your licenses end immediately.
+本许可从采用它的版本开始适用，不声明追溯撤回此前版本已经有效授予的许可。此前 MIT、PolyForm 或其他版本的权利与义务，按对应版本、具体授权和适用法律处理。
 
-## No Liability
+许可方仅授权其有权提供的内容。第三方贡献需要具备相应授权基础；提交贡献本身不视为著作权转让或无限制商业转授权。
 
-***As far as the law allows, the software comes as is, without any warranty or condition, and the licensor will not be liable to you for any damages arising out of these terms or the use or nature of the software, under any kind of legal claim.***
+## 7. 不合规使用
 
-## Definitions
+不满足本许可条件的使用不在本许可授权范围内。发现不合规使用时，应停止相关行为并处理已分发副本的合规问题；相应责任及救济依据适用法律和有效协议确定。
 
-The **licensor** is the individual or entity offering these terms, and the **software** is the software the licensor makes available under these terms.
+## 8. 免责与责任限制
 
-**You** refers to the individual or entity agreeing to these terms.
+在适用法律允许的范围内，本项目按“现状”提供，不附带明示或默示保证，包括适销性、特定用途适用性或不侵权保证。许可方和贡献者不因本项目使用、修改、分发或不能使用而承担法律允许排除的损害赔偿责任。本条不排除法律不得排除或限制的责任。
 
-**Your company** is any legal entity, sole proprietorship, or other kind of organization that you work for, plus all organizations that have control over, are under the control of, or are under common control with that organization.  **Control** means ownership of substantially all the assets of an entity, or the power to direct its management and policies by vote, contract, or otherwise.  Control can be direct or indirect.
+## 9. 文本与联系
 
-**Your licenses** are all the licenses granted to you for the software under these terms.
+本许可中文正文为准。README、示例说明和英文摘要用于帮助理解，不能扩大或替代本许可的授权范围。
 
-**Use** means anything you do with the software requiring one of your licenses.
+商业授权联系及版本说明见 LICENSING.md，通过 https://302api.com 当前公布的支持渠道申请。
+
+## English summary (non-authoritative)
+
+Free use, modification and integration in your own commercial applications to access 302API are permitted subject to this custom license. Written authorization is required for competitive general-purpose API relay/gateway services and rebranding redistribution prohibited above. Preserve applicable notices and source attribution. This is a source-available license, not the standard Apache-2.0 license or an OSI-approved open-source license. Prior valid license grants are not retroactively revoked.
