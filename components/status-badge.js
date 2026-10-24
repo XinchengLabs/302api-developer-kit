@@ -1,4 +1,5 @@
-// MIT: presentation only. The caller supplies a verified state, or unknown.
+// SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+// presentation only. The caller supplies a verified state, or unknown.
 const STATES = {
   operational: ['#16844b', '运行正常'],
   degraded: ['#a76500', '服务异常'],

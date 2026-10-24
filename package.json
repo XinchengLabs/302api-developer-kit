@@ -4,7 +4,11 @@
   "private": true,
   "type": "module",
   "description": "302API integration examples, client configuration and browser components",
-  "license": "MIT",
-  "engines": { "node": ">=20" },
-  "dependencies": { "openai": "^6.0.0" }
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "openai": "^6.0.0"
+  }
 }

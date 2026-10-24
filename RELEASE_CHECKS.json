@@ -18,5 +18,8 @@
   "runtime_sdk_requests_run": false,
   "browser_or_client_acceptance_run": false,
   "paid_requests_made": false,
-  "production_changed": false
+  "production_changed": false,
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "commercial_use": "separate written authorization required; see LICENSE and LICENSING.md",
+  "prior_mit_release": "67df8285831cacf4ad9ed52e1ffb247345ad7b89"
 }

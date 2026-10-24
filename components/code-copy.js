@@ -1,4 +1,5 @@
-// MIT: a dependency-free copy button. It never receives or stores API keys.
+// SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+// a dependency-free copy button. It never receives or stores API keys.
 export class ApiCodeCopy extends HTMLElement {
   connectedCallback() {
     if (this.shadowRoot) return;
