@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: LicenseRef-302API-Community-Commercial-1.0
+# SPDX-License-Identifier: Apache-2.0
 """Synthetic formula tests only: no network, customer data, or account state."""
 import copy
 import ast

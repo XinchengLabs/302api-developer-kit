@@ -1,6 +1,6 @@
 """Offline public-price arithmetic. No accounts, payments, holds, or network I/O.
 
-SPDX-License-Identifier: LicenseRef-302API-Community-Commercial-1.0
+SPDX-License-Identifier: Apache-2.0
 """
 from __future__ import annotations
 

@@ -1,6 +1,6 @@
 # 302API Developer Kit
 
-**302API 的公开开发者资料与接入示例。接入 302API 的自有商业项目可免费集成。** 提供技术说明、Python / Node.js / cURL 示例、客户端配置和无框架依赖的前端组件。
+**302API 的开源开发者资料与接入示例（Apache-2.0）。** 提供技术说明、Python / Node.js / cURL 示例、客户端配置和无框架依赖的前端组件。
 
 [官网](https://302api.com) · [模型与价格](https://302api.com/models) · [接入文档](https://302api.com/docs) · [教程](https://302api.com/docs#gui-clients) · [服务状态](https://302api.com/status/)
 
@@ -109,15 +109,12 @@ python3 -m http.server 8080 --bind 127.0.0.1
 - 本次未进行真实付费推理、第三方客户端、浏览器 / 移动设备或完整安全验收；示例和组件不能据此被视为所有环境都已验证。
 - 公开资料不单独证明线上部署版本、上游来源或实时服务可用性；相应信息应结合公开规则、实际账单与真实观测核对。
 
-## License / 社区与商业许可
+## License / 开源许可
 
-本项目采用 **302API Community & Commercial License**（自定义源码可见许可，部分条款参考 Apache-2.0 的授权结构）：
+本项目以 **[Apache License 2.0](LICENSE)** 开源：个人与企业均可免费使用、修改、商用和再分发，无需另行申请授权。
 
-- ✅ **免费商用集成**：允许个人与企业在自有商业项目中免费使用、修改与集成，以接入 [302API](https://302api.com) 服务。
-- ❌ **禁止同行换皮与竞品中转**：未经书面授权，禁止将本项目用于搭建面向第三方的竞争性 API 中转/网关服务，或抹除 `302API` 品牌标识后重新分发。
+- **唯一要求：保留署名。** 再分发本项目或其衍生作品时，须保留 [NOTICE](NOTICE) 中的项目名称“302API Developer Kit”与仓库地址 `https://github.com/XinchengLabs/302api-developer-kit`，并按 Apache-2.0 保留版权与许可声明、标明重要修改。
+- 集成组件不需要把自有产品改成 302API 品牌，也不需要在界面上展示 302API 标志；把 NOTICE 随源码或发行包一起保留即可。
+- Apache-2.0 不授予商标使用权：可以如实说明“基于 302API Developer Kit”，但不能暗示获得 302API 官方合作或背书。
 
-普通商业应用、SaaS 或自身业务后端不会仅因收费、面向客户或采用内部代理而自动构成竞品。集成组件时保留相关版权、许可和来源声明，无需把整个自有产品改成 302API 品牌。
-
-详情请参阅 [LICENSE](LICENSE)、[NOTICE](NOTICE) 与 [商业授权说明](LICENSING.md)。API 调用费用、第三方 SDK 和客户端的许可另行适用。
-
-附加用途限制后，本项目不属于标准 Apache-2.0 或 OSI 定义的开源软件，应称为 **source-available（源码可见）**。此前 MIT / PolyForm 版本已有效授予的权利不因本次更改自动失效。
+API 调用费用、第三方 SDK 和客户端的许可另行适用。更多说明见 [LICENSING.md](LICENSING.md)。此前 MIT / PolyForm / 自定义许可版本已授予的权利不受影响。

@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: LicenseRef-302API-Community-Commercial-1.0
+// SPDX-License-Identifier: Apache-2.0
 // presentation only. The caller supplies a verified state, or unknown.
 const STATES = {
   operational: ['#16844b', '运行正常'],

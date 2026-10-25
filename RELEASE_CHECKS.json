@@ -30,8 +30,9 @@
   "browser_or_client_acceptance_run": false,
   "paid_requests_made": false,
   "production_changed": false,
-  "license": "LicenseRef-302API-Community-Commercial-1.0",
-  "commercial_use": "free integration in own projects to access 302API; written authorization required for competitive API relay/gateway services or prohibited rebranding redistribution",
+  "license": "Apache-2.0",
+  "commercial_use": "free use, modification, commercial use and redistribution under Apache-2.0; redistributions must retain NOTICE (project name and repository address)",
   "prior_mit_release": "67df8285831cacf4ad9ed52e1ffb247345ad7b89",
-  "prior_polyform_release": "fc33b9c94c4f32ba7ca0bfdb70182186cbd94b90"
+  "prior_polyform_release": "fc33b9c94c4f32ba7ca0bfdb70182186cbd94b90",
+  "prior_custom_release": "606874188a44ccc3ce87c50201009cb2547b1a6e"
 }

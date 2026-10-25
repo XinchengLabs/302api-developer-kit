@@ -1,7 +1,12 @@
-Copyright (c) 2026 XinchengLabs
-Project: 302API Developer Kit
-License: 302API Community & Commercial License 1.0
+302API Developer Kit
+Copyright 2026 XinchengLabs
+
 Source: https://github.com/XinchengLabs/302api-developer-kit
 Website: https://302api.com
 
-Redistributions must preserve the applicable copyright, license and 302API source attribution required by LICENSE.
+This product includes software from the 302API Developer Kit,
+licensed under the Apache License, Version 2.0.
+
+Under Section 4(d) of the Apache License 2.0, redistributions of this
+project or of derivative works must retain this NOTICE file, including
+the project name "302API Developer Kit" and the repository address above.

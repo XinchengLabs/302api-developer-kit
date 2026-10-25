@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: LicenseRef-302API-Community-Commercial-1.0
+// SPDX-License-Identifier: Apache-2.0
 // a dependency-free copy button. It never receives or stores API keys.
 export class ApiCodeCopy extends HTMLElement {
   connectedCallback() {

@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: LicenseRef-302API-Community-Commercial-1.0
+// SPDX-License-Identifier: Apache-2.0
 // local ID/name filtering only. No model recommendation or network request.
 export class ApiModelPicker extends HTMLElement {
   #models = [];

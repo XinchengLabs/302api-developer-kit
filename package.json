@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "302API integration examples, client configuration and browser components",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "Apache-2.0",
   "engines": {
     "node": ">=20"
   },
