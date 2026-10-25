@@ -1,0 +1,16 @@
+{
+  "model_id": "claude-sonnet-5-5",
+  "request_started_at": "2026-10-25T10:00:00+08:00",
+  "usage_format": "anthropic",
+  "input_modality": "text",
+  "usage": {
+    "input_tokens": 1000,
+    "output_tokens": 500,
+    "cache_read_input_tokens": 400,
+    "cache_creation_input_tokens": 300,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 200,
+      "ephemeral_1h_input_tokens": 100
+    }
+  }
+}

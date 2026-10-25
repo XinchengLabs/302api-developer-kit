@@ -1,0 +1,12 @@
+{
+  "model_id": "DeepSeek-V4.1-Flash-1017",
+  "request_started_at": "2026-10-25T10:00:00+08:00",
+  "usage_format": "openai-chat",
+  "input_modality": "text",
+  "usage": {
+    "prompt_tokens": 100000,
+    "completion_tokens": 1000,
+    "prompt_cache_hit_tokens": 60000,
+    "prompt_cache_miss_tokens": 40000
+  }
+}
