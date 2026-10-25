@@ -42,8 +42,8 @@
 
 ## 历史版本
 
-- [初始提交 67df828](https://github.com/hangzhouxiaozhu/302api-developer-kit/commit/67df8285831cacf4ad9ed52e1ffb247345ad7b89) 曾以 MIT 发布。
-- [后续提交 fc33b9c](https://github.com/hangzhouxiaozhu/302api-developer-kit/commit/fc33b9c94c4f32ba7ca0bfdb70182186cbd94b90) 曾以 PolyForm Noncommercial 1.0.0 发布。
+- [初始提交 67df828](https://github.com/XinchengLabs/302api-developer-kit/commit/67df8285831cacf4ad9ed52e1ffb247345ad7b89) 曾以 MIT 发布。
+- [后续提交 fc33b9c](https://github.com/XinchengLabs/302api-developer-kit/commit/fc33b9c94c4f32ba7ca0bfdb70182186cbd94b90) 曾以 PolyForm Noncommercial 1.0.0 发布。
 
 本次变更不声明撤回先前版本已有效授予的许可。其他人仍可能依旧 MIT 版本使用当时已有代码；不能把更新默认分支或删除历史当成追溯取消商用权利的方式。各版本的具体权利与义务以对应许可和适用法律为准。
 

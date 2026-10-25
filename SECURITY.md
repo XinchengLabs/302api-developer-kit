@@ -2,7 +2,7 @@
 
 请通过仓库 **Security → Report a vulnerability** 私密报告安全问题：
 
-https://github.com/hangzhouxiaozhu/302api-developer-kit/security/advisories/new
+https://github.com/XinchengLabs/302api-developer-kit/security/advisories/new
 
 若该入口不可用，请通过 [官网](https://302api.com) 当前公布的支持渠道联系维护者，先说明需要私密报告；不要在公开 Issue 中放漏洞利用细节或用户数据。
 
