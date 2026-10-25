@@ -2,7 +2,7 @@
 
 **302API 的公开开发者资料与接入示例。接入 302API 的自有商业项目可免费集成。** 提供技术说明、Python / Node.js / cURL 示例、客户端配置和无框架依赖的前端组件。
 
-[官网](https://302api.com) · [模型与价格](https://302api.com/models) · [接入文档](https://302api.com/docs) · [教程](https://302api.com/guides/) · [服务状态](https://302api.com/status/)
+[官网](https://302api.com) · [模型与价格](https://302api.com/models) · [接入文档](https://302api.com/docs) · [教程](https://302api.com/docs#gui-clients) · [服务状态](https://302api.com/status/)
 
 ## 公开范围
 
