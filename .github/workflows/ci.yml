@@ -1,0 +1,47 @@
+# 每次推送和 PR：跑验算器单元测试，并检查全部示例的语法与 JSON 结构。不使用任何 Key，不发起付费请求。
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: 验算器单元测试
+        run: python -B billing-calculator/test_calculator.py -v
+      - name: Python 语法
+        run: python -m py_compile $(git ls-files '*.py')
+      - name: 验算器示例
+        run: |
+          python -B billing-calculator/calculator.py --prices billing-calculator/public-prices-2026-11-22.json --request billing-calculator/examples/anthropic-cache.json > /dev/null
+          python -B billing-calculator/calculator.py --prices billing-calculator/public-prices-2026-11-22.json --request billing-calculator/examples/gpt-long-context.json > /dev/null
+          python -B billing-calculator/calculator.py --prices billing-calculator/public-prices-2026-10-25.json --request billing-calculator/examples/deepseek-off-peak.json --calendar billing-calculator/calendar-2026.json > /dev/null
+      - name: 自检工具可运行
+        run: python tools/doctor.py --help > /dev/null
+
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: JavaScript 语法
+        run: for f in $(git ls-files '*.js' '*.mjs'); do node --check "$f"; done
+      - name: Shell 语法
+        run: for f in $(git ls-files '*.sh'); do bash -n "$f"; done
+      - name: JSON 结构
+        run: for f in $(git ls-files '*.json'); do python3 -m json.tool "$f" > /dev/null; done

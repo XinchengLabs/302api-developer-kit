@@ -1,9 +1,9 @@
 {
   "name": "302api-developer-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "302API integration examples, client configuration and browser components",
+  "description": "302API developer kit: setup checker, runnable examples, client configs, browser components and an offline billing calculator",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=20"

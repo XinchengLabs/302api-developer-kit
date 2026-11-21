@@ -2,6 +2,7 @@
 
 | 现象 | 先检查 |
 |---|---|
+| 不知道哪里出错 | 先运行 `python3 tools/doctor.py`，逐项检查 Key、地址、网络、证书和鉴权，并给出处理办法 |
 | 401 | Key 是否完整、是否属于本站、是否启用，客户端使用哪个认证字段 |
 | 403 | 账户 / Key 权限、客户端来源或安全规则；结合实际错误说明判断 |
 | 404 / 路径不存在 | 最终 URL 是否重复 `/v1`，当前模型是否支持该路径 |
@@ -11,7 +12,8 @@
 | 5xx / 超时 | 时间、请求关联 ID、客户端超时、服务状态及调用记录 |
 | 图片不支持 | 客户端能力声明、实际模型视觉能力、请求格式及协议 |
 | 流有文字但最后报错 | 结束事件、usage 是否完整、网络中断与调用记录；不要只看 HTTP 200 |
-| 价格或 usage 不一致 | 输入 / 输出 / 缓存 / 模态分类、时段及账单规则，不用字符数直接换算 |
+| `CERTIFICATE_VERIFY_FAILED` / 证书校验失败 | macOS 上 python.org 安装的 Python 需运行“Install Certificates.command”，或 `pip install certifi`；公司 HTTPS 代理需导入其根证书 |
+| 价格或 usage 不一致 | 输入 / 输出 / 缓存 / 模态分类、时段及账单规则，不用字符数直接换算；可用 `examples/python/verify_bill.py` 按请求编号逐笔核对 |
 | 兼容接口调用 Claude 出现缓存写入 / 命中 | 多轮长对话由网关自动加缓存标记，见[技术概览](technical-overview.md#兼容接口调用-claude-的提示缓存2026-11-22-起)；响应头 `X-302API-Compatibility` 含 `auto-prompt-cache` 即为自动缓存 |
 
 HTTP 状态码只是排查入口，实际原因应结合返回的错误类型和请求记录确认。

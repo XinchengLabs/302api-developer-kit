@@ -6,12 +6,16 @@
     "client configuration",
     "independent browser components",
     "offline public-price arithmetic calculator",
-    "dated public price snapshot and synthetic formula tests"
+    "dated public price snapshot and synthetic formula tests",
+    "zero-dependency setup checker (tools/doctor.py)",
+    "tool calling, vision, prompt caching and bill verification examples",
+    "Codex CLI and Cline client configuration",
+    "GitHub Actions CI"
   ],
   "credential_scanner": "Gitleaks 8.30.1",
   "unresolved_credential_findings": 0,
   "private_identifier_findings": 0,
-  "python_syntax_files": 5,
+  "python_syntax_files": 10,
   "javascript_syntax_files": 7,
   "bash_syntax_files": 2,
   "json_parse": "passed",
@@ -26,9 +30,19 @@
     "server_accounting_engine_included": false,
     "historical_request_price_authenticity_verified": false
   },
-  "runtime_sdk_requests_run": false,
+  "runtime_sdk_requests_run": {
+    "run_on": "2026-11-22",
+    "key": "maintainer test key",
+    "examples": [
+      "tools/doctor.py --chat gpt-6-luna",
+      "examples/python/tool_calling.py (gpt-6-luna)",
+      "examples/python/vision.py (claude-haiku-5-5)",
+      "examples/python/verify_bill.py (gpt-6-luna, matched console charge)",
+      "examples/python/prompt_cache.py (claude-sonnet-5-5, claude-haiku-5-5)"
+    ]
+  },
   "browser_or_client_acceptance_run": false,
-  "paid_requests_made": false,
+  "paid_requests_made": "small test-key calls only (under USD 0.30 in total)",
   "production_changed": false,
   "license": "Apache-2.0",
   "commercial_use": "free use, modification, commercial use and redistribution under Apache-2.0; redistributions must retain NOTICE (project name and repository address)",

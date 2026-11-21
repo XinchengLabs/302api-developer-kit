@@ -32,9 +32,17 @@ export MODEL_ID='MODEL_ID_HERE'
 
 示例程序直接读取进程环境，不会自动加载 `.env`。不要把 API Key 添加到仓库跟踪的 JSON、YAML、脚本或组件属性中。
 
-## 4. 首次请求
+## 4. 一键自检
 
-先运行不生成模型文本的模型列表查询：
+```bash
+python3 tools/doctor.py
+```
+
+只用 Python 标准库，不产生费用。它会依次检查 Key 格式、Base URL 写法（是否漏了或重复了 `/v1`）、网络与 HTTPS 证书、鉴权，并列出当前 Key 可用的全部模型和单价，最后输出可直接复制的 SDK 与客户端配置。每一项不通过时都会给出处理办法。
+
+想确认真实对话链路，可以加 `--chat 模型ID` 发一次很短的请求（会产生极少费用），输出里带有请求编号，可以到控制台调用记录核对。需要附在工单里时用 `--json` 输出。
+
+不想用 Python 时，也可以只查模型列表：
 
 ```bash
 bash examples/curl/models.sh
