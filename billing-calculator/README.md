@@ -10,7 +10,7 @@
 
 ```bash
 python3 -B billing-calculator/calculator.py \
-  --prices billing-calculator/public-prices-2026-10-25.json \
+  --prices billing-calculator/public-prices-2026-11-22.json \
   --request billing-calculator/examples/anthropic-cache.json
 ```
 
@@ -20,9 +20,10 @@ python3 -B billing-calculator/calculator.py \
 
 ```bash
 python3 -B billing-calculator/calculator.py \
-  --prices billing-calculator/public-prices-2026-10-25.json \
+  --prices billing-calculator/public-prices-2026-11-22.json \
   --request billing-calculator/examples/gpt-long-context.json
 
+# DeepSeek 分时计费示例：DeepSeek 模型暂未在售、即将重新上线，示例沿用 2026-10-25 快照里的分时报价
 python3 -B billing-calculator/calculator.py \
   --prices billing-calculator/public-prices-2026-10-25.json \
   --request billing-calculator/examples/deepseek-off-peak.json \
@@ -31,11 +32,13 @@ python3 -B billing-calculator/calculator.py \
 
 `--request -` 从标准输入读取；成功时向 stdout 输出结果 JSON，失败时向 stderr 输出 `error.code` / `error.message`，退出码为 `2`。
 
-| 合成示例 | 快照下的合计美元 |
-|---|---|
-| `anthropic-cache.json` | `0.007543` |
-| `gpt-long-context.json` | `0.016258` |
-| `deepseek-off-peak.json` | `0.001721` |
+| 合成示例 | 使用的快照 | 合计美元 |
+|---|---|---|
+| `anthropic-cache.json` | 2026-11-22 | `0.007543` |
+| `gpt-long-context.json` | 2026-11-22 | `0.016258` |
+| `deepseek-off-peak.json` | 2026-10-25 | `0.001721` |
+
+前两个示例在两份快照下结果相同（Claude Sonnet 5.5 与 GPT-6 Luna 的价格未变）。
 
 ## 输入
 
@@ -129,7 +132,14 @@ python3 -B billing-calculator/calculator.py \
 
 结果含归一化 Token、各项单价和倍率、未舍入分项、合计、所选时段、舍入方式及警告。未给汇率时 `cny=null`，不从今天的设置猜测。
 
-`public-prices-2026-10-25.json` 是 **2026-10-25 北京时间抓取的公开快照**，元数据保留来源和原始响应摘要。它不会自动更新。后续可以手动保存 [公开价格目录](https://dashboard.302api.com/api/public/models)，保留抓取时间；不要把今天的目录当作旧账单的锁定价格。
+随附两份有日期的公开快照，元数据都保留来源和原始响应摘要，**不会自动更新**：
+
+| 快照 | 抓取时间（北京时间） | 说明 |
+|---|---|---|
+| `public-prices-2026-11-22.json` | 2026-11-22 | 当前在售的 20 个模型。相比上一份：新增 Claude Fable 5.2、GPT-6.2 Astra / Sol、GPT-6.1 Sol / Terra、GPT Image 2.6 Flare / Sunburst；Gemini 优惠期结束，2026-11-20 起恢复原价；GPT-6 Astra 增加 1 小时缓存写入价；DeepSeek 暂未在售 |
+| `public-prices-2026-10-25.json` | 2026-10-25 | 保留用于核对这段时间的账单，以及 DeepSeek 分时计费示例 |
+
+核对账单时，请选用与调用时间对应的快照。需要更新时，可以手动保存 [公开价格目录](https://dashboard.302api.com/api/public/models)，保留抓取时间；不要把今天的目录当作旧账单的锁定价格。
 
 **验算结果只证明“给定这些输入，公式算得这个金额”。** 要核对真实历史账单，还需要该次请求真实锁定的客户价格与规则版本、完整最终用量、开始时间和实际汇率。价格调整、缺失用量、异常估算、赠金或账务变动不在本工具证明范围内。
 
@@ -147,7 +157,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path("billing-calculator").resolve()))
 from calculator import calculate, load_json
 
-prices = load_json(Path("billing-calculator/public-prices-2026-10-25.json").read_text())
+prices = load_json(Path("billing-calculator/public-prices-2026-11-22.json").read_text())
 request = load_json(Path("billing-calculator/examples/anthropic-cache.json").read_text())
 result = calculate(request, prices)
 print(result["amount_usd"])

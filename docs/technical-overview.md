@@ -29,6 +29,16 @@ flowchart LR
 
 这些是接口类别，不能把路径存在解释成所有模型均能使用。工具调用参数、图片输入和图片生成也是不同能力。
 
+### 兼容接口调用 Claude 的提示缓存（2026-11-22 起）
+
+通过 `POST /v1/chat/completions` 调用 Claude 时，多数 OpenAI 格式的客户端不会发送 `cache_control`，长对话每轮都按输入原价重发全部上下文。本站网关会为这类请求自动加上缓存标记，用法与 Claude 官方的多轮缓存一致，客户端无需修改：
+
+- **适用模型**：Claude Opus 5.5、Sonnet 5.5、Haiku 5.5、Fable 5.1、Fable 5.2（以 [模型页](https://302api.com/models) 为准）。
+- **何时加标记**：已有助手回复的多轮对话、文字较长时才加；第一轮、短请求不加。请求里已自带 `cache_control` 的，原样转发，不做改动。
+- **计费**：与原生接口相同，按官网缓存价再享本站折扣。首次写入按缓存写入价（5 分钟缓存为输入价的 1.25 倍），之后命中的部分按缓存命中价计费。
+- **如何确认**：响应头 `X-302API-Compatibility` 含 `auto-prompt-cache` 表示本次加了标记；`usage.prompt_tokens_details` 中的 `cached_tokens`、`cache_write_tokens` 分别是缓存命中和写入的 Token，控制台调用记录逐条可查。
+- **不适用**：原生接口 `/v1/messages` 一直由调用方自行控制缓存，不受影响；非 Claude 模型不受影响。
+
 ## 模型与价格
 
 - 真实模型 ID、可用范围和售价以 [模型页](https://302api.com/models)、控制台及用户实际配置为准。

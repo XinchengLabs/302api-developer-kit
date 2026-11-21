@@ -11,6 +11,7 @@ import io
 import os
 from pathlib import Path
 import socket
+import json
 import unittest
 from unittest import mock
 
@@ -678,6 +679,36 @@ class FormulaTests(unittest.TestCase):
                 self.assertEqual(result["amount_usd"], rounded)
                 self.assertEqual(Decimal(result["amount_usd_unrounded"]), Decimal(exact))
                 self.assertIs(result["historical_price_match_verified"], False)
+
+    def test_examples_with_2026_11_22_snapshot(self):
+        directory = Path(__file__).parent
+        catalog = load_json((directory / "public-prices-2026-11-22.json").read_text())
+        calendar = load_json((directory / "calendar-2026.json").read_text())
+        for filename, rounded, exact in (
+            ("anthropic-cache.json", "0.007543", "0.007543"),
+            ("gpt-long-context.json", "0.016258", "0.016258176"),
+        ):
+            with self.subTest(filename=filename):
+                value = load_json((directory / "examples" / filename).read_text())
+                result = calculate(value, catalog, calendar)
+                self.assertEqual(result["amount_usd"], rounded)
+                self.assertEqual(Decimal(result["amount_usd_unrounded"]), Decimal(exact))
+
+    def test_every_text_model_in_2026_11_22_snapshot_can_be_quoted(self):
+        directory = Path(__file__).parent
+        catalog = load_json((directory / "public-prices-2026-11-22.json").read_text())
+        calendar = load_json((directory / "calendar-2026.json").read_text())
+        text_models = [m["model_id"] for m in catalog["items"] if m.get("model_type") != "image"]
+        self.assertGreaterEqual(len(text_models), 14)
+        for model_id in text_models:
+            with self.subTest(model_id=model_id):
+                value = load_json(json.dumps({
+                    "model_id": model_id, "request_started_at": "2026-11-22T10:00:00+08:00",
+                    "usage_format": "openai-chat", "input_modality": "text",
+                    "usage": {"prompt_tokens": 1000, "completion_tokens": 100},
+                }))
+                result = calculate(value, catalog, calendar)
+                self.assertGreater(Decimal(result["amount_usd_unrounded"]), 0)
 
 
 if __name__ == "__main__":
