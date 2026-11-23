@@ -169,7 +169,7 @@ print(result["amount_usd"])
 
 ## 支持范围与测试
 
-初版支持 `model_type=chat` 且没有独立 `modality_prices` 的文本与缓存公式。不支持图像、音频、向量、收费工具、预测输出或其他非标准服务档位的报价。发现非零未知用量、缺少所需单价、缓存口径冲突、日历缺失等情况会报错，不将未知费用当零。
+初版支持 `model_type=chat` 且没有独立 `modality_prices` 的文本与缓存公式。不支持图像、音频、收费工具、预测输出或其他非标准服务档位的报价。发现非零未知用量、缺少所需单价、缓存口径冲突、日历缺失等情况会报错，不将未知费用当零。
 
 ```bash
 python3 -B -m unittest discover -s billing-calculator -p 'test_*.py' -v

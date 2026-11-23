@@ -21,7 +21,6 @@ flowchart LR
 | 模型列表 | `GET /v1/models` | 使用当前 Key 的权限范围 |
 | 聊天 | `POST /v1/chat/completions` | 模型及渠道支持 OpenAI 兼容聊天 |
 | Responses | `POST /v1/responses` | 模型及路由支持 Responses |
-| Embeddings | `POST /v1/embeddings` | 选择支持向量功能的模型 |
 | 原生 Anthropic | `/v1/messages`、`/v1/messages/count_tokens` | 支持原生协议的模型 / 渠道 |
 | 图像生成与编辑 | 启用模型对应的图像或聊天路径 | 具体模型、输入格式、模态与路径分别确认 |
 | 流式输出 | SSE | 模型和接口支持，调用端正确读取事件流 |
