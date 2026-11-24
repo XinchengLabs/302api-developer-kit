@@ -59,6 +59,7 @@ export MODEL_ID=gpt-6-luna    # 用 tools/doctor.py 列出的任意对话模型
 | 流式输出 | `python examples/python/stream.py` | 逐字输出，并读取最后的用量 |
 | 工具调用 | `python examples/python/tool_calling.py` | 模型请求调用函数 → 本地执行 → 把结果交回模型，完整往返 |
 | 看图 | `python examples/python/vision.py` | 现场生成一张图片发给模型，不依赖外部图片地址 |
+| 文生图 | `python examples/python/generate_image.py "画一张雨夜书店的水彩插画"` | 生成一张 PNG 到当前目录，终端会显示文件路径。[示例源码](examples/python/generate_image.py) |
 | 自动缓存 | `python examples/python/prompt_cache.py` | 多轮长对话逐轮显示缓存写入 / 命中和省下的费用 |
 | 账单验算 | `python examples/python/verify_bill.py` | 调用一次，再用离线验算器算出应扣金额，按请求编号到控制台核对 |
 | Anthropic 原生 | `python examples/python/anthropic_messages.py` | Anthropic SDK 直连 `/v1/messages`（需设置 `ANTHROPIC_MODEL_ID`） |
@@ -66,6 +67,8 @@ export MODEL_ID=gpt-6-luna    # 用 tools/doctor.py 列出的任意对话模型
 | cURL | `bash examples/curl/models.sh`、`chat.sh` | 不装任何 SDK |
 
 运行推理示例会产生少量调用费用。示例关闭了 SDK 的自动重试，避免结果不明时重复扣费；生产项目请自行设计超时、重试和对账。
+
+文生图示例使用上面设置的 `API_302API_KEY`，默认用 `gpt-image-2.6-flare` 生成一张 1024×1024 的低质量档 PNG，按所用模型计费。可用环境变量 `IMAGE_MODEL_ID` 切换到你的 Key 有权调用的其他 GPT 图片模型。[生图接口文档](https://302api.com/docs/#images)
 
 ## 客户端配置
 
